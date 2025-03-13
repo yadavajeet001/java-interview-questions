@@ -35,6 +35,11 @@ public class FirstNonRepeatedCharacter {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
 
+        //or
+        //for (char ch : str.toCharArray()) {
+        //     map.put(ch, map.getOrDefault(ch, 0) + 1);
+        //}
+
         //Iterate over the map and return the first character with frequency 1
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
             if (entry.getValue() == 1) {
