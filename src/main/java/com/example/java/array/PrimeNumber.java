@@ -5,7 +5,7 @@ public class PrimeNumber {
     public static void main(String[] args) {
         int num = 17;
         boolean isPrime = checkPrimeNumber(num);
-        System.out.println(" Palindrome number : " + isPrime);
+        System.out.println(" Prime number : " + isPrime);
     }
 
     private static boolean checkPrimeNumber(int num) {
