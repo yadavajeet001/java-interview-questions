@@ -11,7 +11,7 @@ package com.example.java.string;
  * Input: "hello"
  * Output: "hello" is not a palindrome.
  */
-public class PalindromeNumber {
+public class PalindromeString2 {
     public static void main(String[] args) {
         String str = "madam";
         boolean result = isPalindrome(str);
