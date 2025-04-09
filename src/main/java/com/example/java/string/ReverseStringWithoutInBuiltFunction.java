@@ -1,7 +1,7 @@
 package com.example.java.string;
 
 //Reverse a given string  without using inbuilt function
-public class ReverseStringWithoutInBuildFunction {
+public class ReverseStringWithoutInBuiltFunction {
 
     public static void main(String[] args) {
         String str = "hello";
