@@ -28,6 +28,7 @@ public class MapVsFlatMapMethod {
         List<Integer> resultStringToInteger = strings.stream().map(Integer::valueOf).toList();
         System.out.println(resultStringToInteger);
 
+        //convert list of list into single list using flatmap
         List<Integer> odd = Arrays.asList(1, 3, 5);
         List<Integer> even = Arrays.asList(2, 4, 6);
 
