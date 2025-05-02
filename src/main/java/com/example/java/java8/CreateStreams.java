@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 public class CreateStreams {
@@ -32,6 +33,10 @@ public class CreateStreams {
         Stream<Integer> stream6 = Stream.iterate(1, n -> n + 2).limit(5);
 
 // 7. From Files (using NIO)
-        Stream<String> lines = Files.lines(Path.of("data.txt"));
+        //   Stream<String> lines = Files.lines(Path.of("data.txt"));
+
+        final String prefix = "Hello ";
+        Consumer<String> c = name -> System.out.println(prefix + name);
+        c.accept("Ravi");
     }
 }
