@@ -19,6 +19,5 @@ public class FindFirstRepeatingCharacter {
         } else {
             System.out.println("No repeating character");
         }
-
     }
 }
