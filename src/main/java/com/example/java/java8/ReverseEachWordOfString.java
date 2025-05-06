@@ -14,6 +14,5 @@ public class ReverseEachWordOfString {
                 .map(word -> new StringBuilder(word).reverse())
                 .collect(Collectors.joining(" "));
         System.out.println("Reversed String : " + result);
-
     }
 }
