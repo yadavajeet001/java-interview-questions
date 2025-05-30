@@ -10,7 +10,7 @@ public class ReverseString {
     public static void main(String[] args) {
 
         String name = "Ajeet";
-        List<Character> result = name.chars().mapToObj(c -> (char) c).sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        List<Character> result = name.chars().mapToObj(c -> (char) c).sorted(Comparator.reverseOrder()).toList();
         System.out.println("Reversed String into character :"+result);
 
         //or

@@ -17,7 +17,7 @@ public class MapVsFlatMapMethod {
         //map()
         List<String> mapList = Arrays.asList("Hello java", "java map() example");
         List<List<String>> mapResult = mapList.stream().map(list -> Arrays.asList(list.split(" "))).toList();
-        System.out.println(mapList);
+        System.out.println(mapResult);
 
         //convert string to integer
         List<String> flapMapResult = mapList.stream().flatMap(list -> Arrays.stream(list.split(" "))).toList();
