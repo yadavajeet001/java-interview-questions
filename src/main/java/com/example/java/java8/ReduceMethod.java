@@ -21,5 +21,9 @@ public class ReduceMethod {
         Integer reduceResultMin = integerList.stream().reduce(1, Integer::min);
         System.out.println(reduceResultMin);
 
+        // Convert number to a String, get chars, map to digits, and sum
+        int num = 1234;
+        int result = String.valueOf(num).chars().map(Character::getNumericValue).sum();
+        System.out.println("sum of digit : " + result);
     }
 }
