@@ -2,9 +2,7 @@ package com.example.java.java8;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -19,11 +17,11 @@ public class MapVsFlatMapMethod {
         List<List<String>> mapResult = mapList.stream().map(list -> Arrays.asList(list.split(" "))).toList();
         System.out.println(mapResult);
 
-        //convert string to integer
+        //flatmap()
         List<String> flapMapResult = mapList.stream().flatMap(list -> Arrays.stream(list.split(" "))).toList();
         System.out.println("String to Integer: " + flapMapResult);
 
-        //flatMap()
+        //convert string to integer
         List<String> strings = Arrays.asList("1", "2", "3");
         List<Integer> resultStringToInteger = strings.stream().map(Integer::valueOf).toList();
         System.out.println(resultStringToInteger);
