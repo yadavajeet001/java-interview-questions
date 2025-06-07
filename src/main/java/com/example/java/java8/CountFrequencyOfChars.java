@@ -10,7 +10,7 @@ public class CountFrequencyOfChars {
 
         String names = "Ajay Ajeet Chandan";
 
-        System.out.println("-------count frequency of repeating characters-----");
+        System.out.println("-------count frequency of each characters-----");
         Map<Character, Long> map = names.chars().filter(c -> c != ' ')
                 .mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         map.forEach((character, count) -> System.out.println(character + "->" + count));
@@ -18,7 +18,6 @@ public class CountFrequencyOfChars {
         System.out.println("-------count frequency of only repeating characters-----");
         Map<Character, Long> repeatedCharCount = names.chars().filter(c -> c != ' ')
                 .mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
         repeatedCharCount.entrySet().stream().filter(entry -> entry.getValue() > 1).forEach((System.out::println));
 
         String names2 = "Ajay, Ajeet, Chandan";
@@ -26,7 +25,6 @@ public class CountFrequencyOfChars {
         Map<Character, Long> frequencyCount = names2.chars().map(Character::toLowerCase).filter(c -> c != ',' && c != ' ')
                 .mapToObj(c -> (char) c).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         frequencyCount.forEach((character, aLong) -> System.out.println(character + "->" + aLong));
-
 
     }
 }
