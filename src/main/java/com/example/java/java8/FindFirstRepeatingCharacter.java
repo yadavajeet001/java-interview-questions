@@ -1,7 +1,9 @@
 package com.example.java.java8;
 
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -19,5 +21,21 @@ public class FindFirstRepeatingCharacter {
         } else {
             System.out.println("No repeating character");
         }
+
+        //Another Optimize way
+        Set<Character> seen = new HashSet<>();
+
+        Character firstRepeating = name.chars()
+                .mapToObj(ch -> (char) ch)
+                .filter(ch -> !seen.add(ch))  // add returns false if already seen
+                .findFirst()
+                .orElse(null);
+
+        if (firstRepeating != null) {
+            System.out.println("First repeating character: " + firstRepeating);
+        } else {
+            System.out.println("No repeating character");
+        }
     }
 }
+
