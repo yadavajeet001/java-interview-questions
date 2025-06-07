@@ -12,8 +12,8 @@ public class findMissingNumber {
     public static int findMissingNumberInArray(int[] arr, int n) {
         int totalSum = n * (n + 1) / 2;
         int actualSum = 0;
-        for (int j : arr) {
-            actualSum += j;
+        for (int num : arr) {
+            actualSum += num;
         }
         return totalSum - actualSum;
     }
