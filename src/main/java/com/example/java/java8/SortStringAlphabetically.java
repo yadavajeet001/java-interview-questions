@@ -6,7 +6,7 @@ import java.util.List;
 //Sort the string in natural order/Alphabetically
 public class SortStringAlphabetically {
     public static void main(String[] args) {
-        List<String> fruits = Arrays.asList("Banana", "Apple", "Papaya", "Mango");
+        List<String> fruits = Arrays.asList("Banana", "Apple", "papaya", "Mango");
         List<String> sortedOrder = fruits.stream().sorted().toList();
         System.out.println("Sorted Order :" + sortedOrder);
 
