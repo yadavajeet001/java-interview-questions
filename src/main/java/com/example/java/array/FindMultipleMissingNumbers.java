@@ -8,21 +8,21 @@ import java.util.Set;
 public class FindMultipleMissingNumbers {
 
     //Time: O(n) | Space: O(1) (no additional data structures).
-    public static List<Integer> findMissingNumbers(int[] rolls) {
-        int n = rolls.length;
+    public static List<Integer> findMissingNumbers(int[] nums) {
+        int n = nums.length;
         List<Integer> missing = new ArrayList<>();
 
         // Mark present numbers by making the value at their index negative
         for (int i = 0; i < n; i++) {
-            int val = Math.abs(rolls[i]);
+            int val = Math.abs(nums[i]);
             if (val <= n) {
-                rolls[val - 1] = -Math.abs(rolls[val - 1]);
+                nums[val - 1] = -Math.abs(nums[val - 1]);
             }
         }
 
         // All indexes still positive -> Missing numbers
         for (int i = 0; i < n; i++) {
-            if (rolls[i] > 0) {
+            if (nums[i] > 0) {
                 missing.add(i + 1);
             }
         }
@@ -33,10 +33,10 @@ public class FindMultipleMissingNumbers {
     //Another Approach
     //Time complexity O(n)
     //Space Complexity O(n)
-    public static List<Integer> findMissingNumbersWithRange(int[] rolls, int range) {
+    public static List<Integer> findMissingNumbersWithRange(int[] nums, int range) {
         List<Integer> missing = new ArrayList<>();
         Set<Integer> set = new HashSet<>();
-        for (int num : rolls) {
+        for (int num : nums) {
             set.add(num);
         }
         for (int i = 1; i <= range; i++) {
