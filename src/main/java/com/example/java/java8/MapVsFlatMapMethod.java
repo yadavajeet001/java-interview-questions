@@ -14,23 +14,23 @@ public class MapVsFlatMapMethod {
 
         //map()
         List<String> mapList = Arrays.asList("Hello java", "java map() example");
-        List<List<String>> mapResult = mapList.stream().map(list -> Arrays.asList(list.split(" "))).toList();
-        System.out.println(mapResult);
+        List<List<String>> mapResult = mapList.stream().map(list -> Arrays.asList(list.split(", "))).toList();
+        System.out.println("Map : " + mapResult);
 
         //flatmap()
         List<String> flapMapResult = mapList.stream().flatMap(list -> Arrays.stream(list.split(" "))).toList();
-        System.out.println("String to Integer: " + flapMapResult);
+        System.out.println("FlatMap : " + flapMapResult);
 
         //convert string to integer
         List<String> strings = Arrays.asList("1", "2", "3");
         List<Integer> resultStringToInteger = strings.stream().map(Integer::valueOf).toList();
-        System.out.println(resultStringToInteger);
+        System.out.println("Map String to Integer :" + resultStringToInteger);
 
         //convert list of list into single list using flatmap
         List<Integer> odd = Arrays.asList(1, 3, 5);
         List<Integer> even = Arrays.asList(2, 4, 6);
 
         List<Integer> flatMap = Stream.of(odd, even).flatMap(Collection::stream).toList();
-        System.out.println(flatMap);
+        System.out.println("FlatMap - Merge two array into one array : " + flatMap);
     }
 }
