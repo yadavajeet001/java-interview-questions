@@ -13,10 +13,14 @@ public class ReduceMethod {
 
         List<Integer> integerList = Arrays.asList(1, 2, 3, 4, 5);
         Integer reduceResultSum = integerList.stream().reduce(0, Integer::sum);
-        System.out.println(reduceResultSum);
+        System.out.println("Sum :" + reduceResultSum);
 
         Integer reduceResultMax = integerList.stream().reduce(0, Integer::max);
-        System.out.println(reduceResultMax);
+        System.out.println("Max :" + reduceResultMax);
+
+        //Alternative
+        int maxResult2 = integerList.stream().max(Integer::compare).orElse(-1);
+        System.out.println("Max2 :" + maxResult2);
 
         Integer reduceResultMin = integerList.stream().reduce(1, Integer::min);
         System.out.println(reduceResultMin);
