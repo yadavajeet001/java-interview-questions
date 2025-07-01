@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class FirstNonRepeatingCharacter {
     public static void main(String[] args) {
-        String name = "Aajeet";
+        String name = "aajeet";
         Character character = name.chars().mapToObj(ch -> (char) ch)
                 .collect(Collectors.toMap(Character::charValue, v -> 1, Integer::sum, LinkedHashMap::new))
                 .entrySet().stream().filter(entry -> entry.getValue() == 1)
