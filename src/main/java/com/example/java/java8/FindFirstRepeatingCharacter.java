@@ -12,7 +12,7 @@ public class FindFirstRepeatingCharacter {
     public static void main(String[] args) {
         String name = "Ajeet";
         Character character = name.chars().mapToObj(ch -> (char) ch)
-                .collect(Collectors.toMap(Function.identity(), v -> 1, Integer::sum, LinkedHashMap::new))
+                .collect(Collectors.groupingBy(Character::charValue, LinkedHashMap::new, Collectors.counting()))
                 .entrySet().stream().filter(entry -> entry.getValue() > 1)
                 .map(Map.Entry::getKey)
                 .findFirst().orElse(null);
