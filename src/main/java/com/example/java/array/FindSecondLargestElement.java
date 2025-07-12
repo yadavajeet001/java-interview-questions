@@ -8,7 +8,7 @@ public class FindSecondLargestElement {
 
         //Time Complexity - O(n)
         //Space Complexity - O(1)
-        int[] arr = {12, 36, 3, 5, 35};
+        int[] arr = {12, 36, 3, 5, 5, 4, 4,35, 45};
         Integer result = findSecondLargestUsingTreeSet(arr);
         System.out.println("Using TreeSet :" + result);
         int largest = 0, secondLargest = 0;
@@ -17,7 +17,7 @@ public class FindSecondLargestElement {
             if (num > largest) {
                 secondLargest = largest;
                 largest = num;
-            } else if (num > secondLargest && num != largest) {
+            } else if (num > secondLargest) {
                 secondLargest = num;
             }
         }
