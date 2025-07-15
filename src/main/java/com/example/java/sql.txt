@@ -1,0 +1,41 @@
+
+Question-1: Given a table employee with column id, name, salary, department
+find the employee name whom salary is greater than 1000 and group by department
+
+Answer:
+
+select name , department
+from employee
+where salary > 1000
+group by department;
+
+Question-2: Given a table employee with column id and num find the consecutive number
+Example:
+id	num
+1	1
+2	1
+3	1
+4	2
+5	1
+
+//Output : 1
+Answer:
+
+select distinct e1.num
+from employee e1
+join employee e2 ON e1.id = e2.id - 1
+where e1.id = e2.id;
+
+Question-3 : Given a table employee with column id, name, manager_id
+find the employee name who is manager
+
+Answer:
+
+select distinct e1.name
+from employee
+join employee emp_manager on e1.id = emp_manager.id;
+
+
+
+
+

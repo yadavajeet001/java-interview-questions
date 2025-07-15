@@ -13,6 +13,7 @@ package com.example.java.design.pattern;
  * Abstract Factory patterns work around a super-factory which creates other factories
  * At runtime, the abstract factory is coupled with any desired concrete factory which can create
  * objects of the desired type.
+ * Use - When your system requires multiple families of related products and you want to ensure compatibility between them.
  */
 
 //Abstract factory interface
