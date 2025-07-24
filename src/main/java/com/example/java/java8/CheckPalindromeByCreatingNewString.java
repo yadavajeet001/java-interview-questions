@@ -15,7 +15,7 @@ public class CheckPalindromeByCreatingNewString {
         String word = Arrays.stream((input.trim().split("\\s")))
                 .map(w -> w.substring(0, 1))
                 .collect(Collectors.joining());
-        System.out.println("new string word:" + word);
+        System.out.println("new string word :" + word);
 
         boolean isPalindrome = new StringBuilder(word).reverse().toString().equals(word);
         System.out.println("isPalindrome :" + isPalindrome);
