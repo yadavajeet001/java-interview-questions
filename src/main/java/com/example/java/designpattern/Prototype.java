@@ -1,4 +1,4 @@
-package com.example.java.design.pattern;
+package com.example.java.designpattern;
 
 /**
  * The Prototype Design Pattern is a creational pattern that enables the creation of new objects by

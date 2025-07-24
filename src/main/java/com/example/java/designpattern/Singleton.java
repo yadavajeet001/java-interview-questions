@@ -1,4 +1,4 @@
-package com.example.java.design.pattern;
+package com.example.java.designpattern;
 
 /**
  * The Singleton Method Design Pattern ensures a class has only one instance
@@ -32,6 +32,5 @@ class Singleton {
 class Test {
     public static void main(String[] args) {
         Singleton.getInstance();
-
     }
 }

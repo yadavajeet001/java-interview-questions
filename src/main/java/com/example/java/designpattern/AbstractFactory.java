@@ -1,4 +1,4 @@
-package com.example.java.design.pattern;
+package com.example.java.designpattern;
 
 /**
  * The Abstract Factory Pattern is one of the creational design patterns

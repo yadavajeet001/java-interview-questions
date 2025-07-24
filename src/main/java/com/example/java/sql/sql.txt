@@ -32,8 +32,23 @@ find the employee name who is manager
 Answer:
 
 select distinct e1.name
-from employee
+from employee e1
 join employee emp_manager on e1.id = emp_manager.id;
+
+Question-4 : Given employee and department table
+find the second highest salary from employee table with department
+
+Answer:
+
+SELECT
+    e.name,
+    e.salary,
+    d.department_name
+FROM employee e
+JOIN department d ON e.department_id = d.department_id
+GROUP BY e.name, e.salary, d.department_name
+ORDER BY e.salary DESC
+OFFSET 1 LIMIT 1;
 
 
 

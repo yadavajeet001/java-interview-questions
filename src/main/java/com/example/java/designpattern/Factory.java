@@ -1,8 +1,4 @@
-package com.example.java.design.pattern;
-
-interface VehicleFactory {
-    Vehicle createVehicle();
-}
+package com.example.java.designpattern;
 
 /**
  * The Factory Method Design Pattern is a creational design pattern
@@ -13,6 +9,10 @@ interface VehicleFactory {
  * Use - If your object creation process is complex or varies under different conditions,
  * using a factory method can make your client code simpler and promote reusability.
  */
+
+interface VehicleFactory {
+    Vehicle createVehicle();
+}
 
 abstract class Vehicle {
     void printVehicle() {

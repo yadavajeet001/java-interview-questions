@@ -15,6 +15,6 @@ public class CheckPrimeNumber {
         if (num < 1) {
             return false;
         }
-        return IntStream.rangeClosed(2, (int) Math.sqrt(num) / 2).noneMatch(i -> num % i == 0);
+        return IntStream.rangeClosed(2, (int) Math.sqrt(num)).noneMatch(i -> num % i == 0);
     }
 }

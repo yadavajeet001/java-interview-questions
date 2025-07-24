@@ -110,5 +110,11 @@ class TestEmployee {
         System.out.println(employeeList);
         employeeList.forEach(emp -> System.out.println(emp.getName() + "->" + emp.getSalary()));
 
+        //get the employee object which name is ajeet
+        Optional<Employee> res4 = employeeList.stream().filter(name -> name.getName().equals("Ajeet")).findFirst();
+        if (res4.isPresent()) {
+            System.out.println("res4 : " + res4);
+        }
+
     }
 }
