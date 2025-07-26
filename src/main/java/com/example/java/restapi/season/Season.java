@@ -1,4 +1,4 @@
-package com.example.java.restapi;
+package com.example.java.restapi.season;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.example.java.restapi;
+package com.example.java.restapi.season;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

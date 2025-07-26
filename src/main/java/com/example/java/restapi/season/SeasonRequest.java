@@ -1,4 +1,4 @@
-package com.example.java.restapi;
+package com.example.java.restapi.season;
 
 import java.time.LocalDate;
 
